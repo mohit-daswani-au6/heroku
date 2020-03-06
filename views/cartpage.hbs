@@ -1,0 +1,31 @@
+<body  style="background: #fae1bc;">
+
+<div class="container mt-3">
+ {{#each order}}
+    <div class="row" style="background: linen;border-radius: 10%;">
+        <div class="col-3">
+            <img src="{{this.image}}" style="height: 100px; border-radius: 50%"/>
+        </div>
+        <div class="col-2" style="line-height: 5;" >
+            <p>{{this.name}}</p>
+        </div>
+        <div class="col-2" style="line-height: 5;">
+            <p><a><button class="btn btn-info"><img src="https://www.flaticon.com/premium-icon/icons/svg/2549/2549959.svg" width="15px" height="15px" /></button></a>
+                quantity<a><button class="btn btn-info"><img src="https://www.flaticon.com/premium-icon/icons/svg/2550/2550003.svg" width="15px" height="15px" /></button></a>
+                   </p>
+        </div>
+        <div class="col-2" style="line-height: 5;">
+            <p>{{this.price}}</p>
+        </div>
+        <div class="col-2" style="line-height: 5;">
+            <p>total price</p>
+        </div>
+    </div>
+    <br>
+    {{/each}}
+</div>
+
+<a href="exitpage">
+    <button type="button" style="margin-right:100px;width: 200px; float:right" class="btn btn-secondary btn-lg mt-5">Finish payment</button>
+</a>
+</body>

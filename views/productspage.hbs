@@ -1,0 +1,30 @@
+<body style=" background:#fff3e4">
+  <nav aria-label="Page navigation example" style="margin-top:10px;">
+  <ul class="pagination justify-content-center" >
+    <li class="page-item disabled" >
+      <a style="background: #f5b870;" class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item" ><a class="page-link" style="background: #f5b870;"href="?page=1">1</a></li>
+    <li class="page-item" ><a class="page-link" style="background: #f5b870;"href="?page=2">2</a></li>
+    <li class="page-item" >
+      <a class="page-link" style="background: #f5b870;"href="?page=2">Next</a>
+    </li>
+  </ul>
+</nav>
+<div class="row row-cols-1 row-cols-md-5 mt-5" style="margin: 20px;">
+ 
+{{#each product}}
+  <div class="col mb-4">
+    <div class="card" style="border-radius: 7%; height: 400px; background: #f5a39d">
+      <img style="height: 245px;" src="{{this.image_url}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text">price: {{this.price}}</p>
+        <a href="{{this.category}}/{{this._id}}"><button type="button" class="btn btn-info">Buy now</button></a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+</body>
